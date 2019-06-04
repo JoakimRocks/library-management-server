@@ -1,0 +1,22 @@
+{
+  "name": "library-management-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoakimRocks/library-management-server.git"
+  },
+  "author": "Joakim Kiroko <joakimfabio@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JoakimRocks/library-management-server/issues"
+  },
+  "homepage": "https://github.com/JoakimRocks/library-management-server#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
