@@ -28,6 +28,16 @@ app.get("/api/students", (req, res) => {
     });
 
 });
+app.get("/api/books", (req, res) => {
+    pool.query("SELECT author, title FROM books", (error, rows) => {
+        if (error) {
+            return res.status(500).json({ error });
+
+        }
+        res.json(rows);
+    });
+});
+
 app.listen(9000, function() {
 
     console.log("app listening to port 9000");
