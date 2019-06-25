@@ -10,13 +10,9 @@ const pool = mysql.createPool({
     database: process.env.DB_NAME
 })
 
-// app.get("/", function(req, res) {
-//     //logic
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 
-//     res.json({ message: "Hello Joakim" });
-
-
-// })
 app.get("/api/students", (req, res) => {
     pool.query("SELECT address, firstname FROM students", (error, rows) => {
         if (error) {
@@ -37,6 +33,7 @@ app.get("/api/books", (req, res) => {
         res.json(rows);
     });
 });
+
 
 app.listen(9000, function() {
 
