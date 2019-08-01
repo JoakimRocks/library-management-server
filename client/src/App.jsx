@@ -1,7 +1,7 @@
 import React from "react"
 import NavBar from "./NavBar";
 import HomePage from "./HomePage";
-import {Router} from "@reach/router";
+//import {Router} from "@reach/router";
 
 function App () {
   return (
@@ -11,10 +11,10 @@ function App () {
     </header>
 
     <main className = "lm-main">
-      <Router>
-        <HomePage path="/"/>
+      
+        <HomePage />
 
-      </Router>
+      
     </main>
    </div>
           

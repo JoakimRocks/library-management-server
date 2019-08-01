@@ -22,7 +22,7 @@ app.get('/api/students', (req, res) => {
     })
 })
 app.get('/api/books', (req, res) => {
-    pool.query('SELECT author, title FROM books', (error, rows) => {
+    pool.query('SELECT author, title, image FROM books', (error, rows) => {
         if (error) {
             return res.status(500).json({ error })
         }
@@ -52,12 +52,12 @@ app.post('/api/students', (req, res) => {
 app.post('/api/books', (req, res) => {
     const books = req.body
 
-    if (!books.title || books.author || books.book_id) {
+    if (!books.title || books.author || books.book_id || books.image) {
         return res.status(400).json({ error: 'Invalid payload' })
     }
 
     pool.query(
-        'INSERT INTO books (title, author,book_id) VALUES (?, ?, ?)', [books.title, books.author, books.book_id],
+        'INSERT INTO books (title, author, book_id) VALUES (?, ?, ?, ?)', [books.title, books.author, books.book_id, image],
         (error, results) => {
             if (error) {
                 return res.status(500).json({ error })
@@ -95,7 +95,7 @@ app.put("/api/books/:title", (req, res) => {
     }
 
     pool.query(
-        "UPDATE books SET ( title, author,book_id= ?,?,?) WHERE author = ?", [books.title, req.params.title],
+        "UPDATE books SET ( title, author,book_id= ?, ?, ?) WHERE author = ?", [books.title, req.params.title],
         (error, results) => {
             if (error) {
                 return res.status(500).json({ error });

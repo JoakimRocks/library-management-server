@@ -1,3 +1,7 @@
+body {
+    background-color: darksalmon
+}
+
 .lm-body {
     color: aqua;
 }
@@ -13,12 +17,15 @@
 .lm-button {
     background: yellowgreen;
     font-family: algerian;
+    font-size: 30px;
 }
 
 .lm-seeAll {
+    background: white;
+    font-size: 20px;
     display: flex;
-    justify-content: center;
-    margin: 100px;
+    justify-content: left;
+    margin: 40px;
     letter-spacing: 2px;
-    grid-column: inherit
+    text-shadow: 0 1px 1px rgba(red, green, blue, alpha)
 }
