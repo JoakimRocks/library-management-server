@@ -13,7 +13,7 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 
 app.get('/api/students', (req, res) => {
-    pool.query('SELECT address, firstname FROM students', (error, rows) => {
+    pool.query('SELECT * FROM students', (error, rows) => {
         if (error) {
             return res.status(500).json({ error })
         }

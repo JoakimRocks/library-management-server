@@ -14,10 +14,6 @@ function App () {
       
       <HomePage />
       
-      
-        
-
-      
     </main>
    </div>
           
