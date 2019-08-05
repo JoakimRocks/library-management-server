@@ -42,7 +42,7 @@ class HomePage extends React.Component {
         <div>
             {
                 bookDetails.map(book=>(
-                <HomePageDisplay  book={book}/>)
+                <HomePageDisplay book={book}/>)
                 
                 )
             }

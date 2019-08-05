@@ -18,14 +18,59 @@ body {
     background: yellowgreen;
     font-family: algerian;
     font-size: 30px;
+    border-radius: 25px;
+    padding: 20px;
 }
 
-.lm-seeAll {
-    background: white;
-    font-size: 20px;
+.lm-container {
+    position: relative;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 6px;
+}
+
+.lm-nav {
     display: flex;
-    justify-content: left;
-    margin: 40px;
-    letter-spacing: 2px;
-    text-shadow: 0 1px 1px rgba(red, green, blue, alpha)
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    background-color: aqua;
+    border-radius: 25px;
+    padding: 20px;
+}
+
+.lm-fullpage-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 51px);
+    width: 100%;
+}
+
+.lm-fullpage-text>p {
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 1.5;
+    color: #606f7b;
+    margin: 2rem;
+    text-align: center;
+}
+
+@media (min-width: 720px) {
+    .lm-fullpage-text>p {
+        font-size: 1.875rem;
+    }
+}
+
+.lm-btn {
+    color: #fff;
+    padding: 0.5rem 1rem;
+    font-weight: 700;
+    border-radius: 0.25rem;
+    background-color: #4299e1;
+}
+
+.lm-btn.lm-btn-cinemas {
+    padding: 0.5rem 3.5rem;
+    text-decoration: none;
 }
