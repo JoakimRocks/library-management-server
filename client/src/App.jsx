@@ -12,7 +12,10 @@ function App () {
 
     <main className = "lm-main">
       
-        <HomePage />
+      <HomePage />
+      
+      
+        
 
       
     </main>
@@ -21,4 +24,4 @@ function App () {
   )
 }
           
-export default App
+export default App;

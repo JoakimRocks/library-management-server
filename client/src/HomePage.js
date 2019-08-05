@@ -38,6 +38,7 @@ class HomePage extends React.Component {
     }
     render(){
         const {bookDetails}=this.state;
+        console.log(bookDetails);
         return(
         <div>
             {
