@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "@reach/router";
 
 function HomePageDisplay({book}){
     const{image,title,author}=book;
@@ -7,7 +8,7 @@ function HomePageDisplay({book}){
         <img src={image} alt="" style={{width:150, height:150, marginLeft:200 }} />
         <p style={{marginLeft:200}}>{title}</p>
         <p style={{marginLeft:200}}>{author}</p>
-        <a href='/StudentDetails' className="lm-btn" style={{marginLeft:200, marginBottom:50}}>Borrow</a>
+        <Link to='/StudentDetails' className="lm-btn" style={{marginLeft:200, marginBottom:50}}>Borrow</Link>
     </div>
     )
 }
